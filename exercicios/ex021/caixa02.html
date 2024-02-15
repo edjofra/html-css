@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body { 
+            font-family:Arial, Helvetica, sans-serif;
+            background-color: rgb(201, 201, 240);
+        }
+        header { 
+
+            background-color: whitesmoke;
+            padding: 10px;
+            border: 2px solid black;
+            margin:40px auto;
+            text-align: center;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        h1 {
+            box-shadow: inset 2px 0px 11px 3px rgba(0, 0, 255, 0.193); 
+        }
+        nav {
+            background-color: rgb(202, 210, 236);
+            border: 1px solid black;
+            box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.5);
+            
+        }
+        nav > a {
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 30px;
+            
+            
+        } 
+        
+        nav > a:hover {
+            text-decoration: underline;
+        }
+        
+        main {
+            background-color: whitesmoke;
+            padding: 10px;
+            border: 2px solid black;
+            margin:40px auto;
+            border-radius: 10px 10px 10px 10px;
+        }
+        article {
+            background-color: lightblue;
+            border-radius: 8px 8px 8px 8px;
+            
+        }
+
+
+        article > p {
+            text-align:justify;
+            padding: 2px 2px 2px 5px; 
+
+        }
+        article#video {
+            text-align: center;
+
+        }
+        
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin: 0px;
+        }
+         footer>p {
+            margin: 0px;
+         }
+        article>aside { background-color: rgb(76, 123, 146);
+            border-radius: 0 0 8px 8px;
+            text-align: center;
+            padding: 5px;
+            margin: 0px;
+        }
+
+        article>aside>p {
+            margin: 0px;
+        }
+        article>figure{
+            width: 90%; min-width: 17.5em; margin:0 auto;
+        }
+        article>figure>h3{
+            font: 120% sans-serif; text-align: center;
+            padding: 5px;
+        }
+        h2.news { background-color: rgb(48, 151, 203);
+            border-radius: 8px 8px 0 0;
+            padding: 5px;
+
+         }
+
+        .boxvideo{
+            position: relative;
+            padding-bottom: 56.25%; 
+            padding-top: 25px;
+            height: 0;
+             margin:0 auto;
+        }
+        .boxvideo>iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+         #vendas { background-color: rgba(48, 151, 203, 0.47);
+
+         }
+        h3.topic { padding: 0px 0px 0px 5px
+
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1> O Site</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </nav>
+    </header>
+    <main>
+        <section id="noticias"> 
+
+            <article>
+                <h2 class="news">Noticias Internacionais</h2>
+                <h3 class="topic">Israel ataca Gaza indicriminadamente</h3> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quo earum unde at inventore! Numquam, non nobis. Accusamus ullam ratione at adipisci consectetur veritatis unde, quod cumque est corrupti dolor!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sunt est hic iusto ipsum, magnam inventore, expedita asperiores harum impedit voluptatum voluptatibus, maiores accusantium vero explicabo obcaecati quidem laudantium facilis?</p>
+                <h3 class="topic">Guerra na Ucrânia é esquecida</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eum beatae dolores repellendus asperiores iste porro illo unde ipsam enim non, facilis obcaecati quas, quos ab. Sequi ullam nobis laboriosam?</p>
+                <aside>
+                    <p> Save Palestine, doe no site <a href="#">Link</a> </p>
+                </aside>
+
+            </article>
+            <article>
+                <h2 class="news">Noticias nacionais</h2>
+                <h3 class="topic">Reforma tributária é aprovada </h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor laudantium sit distinctio, accusantium quo amet nisi? Nemo impedit officiis voluptate velit consequatur minima. Esse adipisci exercitationem facilis id dicta dolor.</p>
+                <h3 class="topic">Calor indescritível em todas as regiões</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem minima enim maiores laboriosam eaque exercitationem omnis modi possimus! Libero sit rem dignissimos repellendus facere, officiis voluptates quaerat cumque non commodi.</p>
+    
+            </article>
+                
+           <article>
+            <figure>
+                <h3>Exemplo de teste com vídeo</h3>
+                <div class="boxvideo">
+
+                    <iframe  width="560" height="315" src="https://www.youtube.com/embed/l2UDgpLz20M?si=oBxliyw20HwYj_WZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                
+            </figure>
+           </article>
+
+        </section>
+
+        <section id="vendas">
+            <h2> Patrocine nosso trabalho</h2>
+            <div id="livros">
+                <p>Confira nosso catálogo de livros no site da loja <a href="#">Link</a></p>
+            </div>
+            <div id="Cursos">
+                <p> Acesse nossoo curso na plataforma: <a href="#"> Link </a></p>
+            </div>
+
+        </section>
+
+    </main>
+    <footer>
+    <p> Desenvolvid By Edjofra Comapany</p>
+    </footer>
+    
+</body>
+</html>

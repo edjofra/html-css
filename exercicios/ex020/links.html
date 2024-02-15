@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+/*
+# = id
+. = class
+: = pseudo-class
+:: = pseudo-elememt
+> = children
+*/
+
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    a {
+        color:red;
+        text-decoration: none;
+        font-weight: bold;
+
+
+    }
+
+    a:visited { color: rgb(223, 10, 159);
+    }
+    a:hover {
+        color: black;
+        text-decoration: underline;
+    }
+
+    a:active {color:yellow;
+    }
+    a::after{content:'[link]';
+    text-decoration: none;
+    font-weight: normal;
+    color: blueviolet;
+    }
+    .especial {
+        background-color: pink;
+    }
+    .especial::before{
+        content: '<3';
+    }
+    .especial::after{
+        content: '////';
+    }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://www.duolingo.com/learn" target="_blank"> Duolingo</a></li>
+        <li><a href="https://www.estantevirtual.com.br/carrinho" target="_blank">Estante Virtual</a></li>
+        <li><a href="https://esaj.tjce.jus.br/esaj/portal.do?servico=740000"target="_blank" class="especial">Esaj</a></li>
+    </ul>
+    
+</body>
+</html>

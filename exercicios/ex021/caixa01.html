@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Caixas</title>
+
+    <style>
+        h1{
+            height: 300px;
+            width: 300px;
+            background-color: rgb(165, 125, 202);
+            border-width: 6px;
+            border-style: solid;
+            border-color: black;
+
+            /*simplificando as border: width, style, color
+            border: 10px solid black
+            */
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+
+            /*simplificando o padding/mragin: top, right, bottom, left
+
+            border: 10px 10px 10px 10px
+            
+            border: 10px -> se forem todas iguais
+            ou se botar duas:
+            border: 10px 20px -> retangulo, top = botton e right = left
+            */
+
+           /*  "margin: auto;" serve para deixar a caixa toda centralizada, é possivel ainda centralizar só em relação as marnges da direita/esquerda   */
+
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 40px;
+            margin-left: 10px;
+
+            outline-width: 5px;
+            outline-color: aqua;
+            outline-style: solid;
+
+            /* outline tem a msm shorthand da border, ou seja, widht-style-color*/
+
+        }
+
+        a{
+            border: 2px solid red;
+
+            padding: 10px 12px;
+           /* display:inline ou block*/
+        }
+    </style>
+</head>
+<body>
+    <h1>ISSO</h1>
+    <p>Paragrafas (p) e titulos (h1) são exemplos de box-level</p>
+    <p>Os 
+        <a href="#">links(a)</a> 
+        
+        são exemplos de inline-level </p>
+    
+</body>
+</html>
