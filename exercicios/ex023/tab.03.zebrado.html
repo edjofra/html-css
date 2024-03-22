@@ -3,26 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabelas</title>
+    <title>Tabelas - Zebra Effect</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
-        caption{
-            font-size: 1.2em;
-            font-weight: bold;
-            padding: 10px;
-            background-color: lightgrey;
-        }
+        
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative; 
+            /* need p/ fixar o cabeçalho  */
         }
+
+        
         td, th {
             border: 1px solid black;
             padding: 8px;
         }
-        th, tfoot {
+
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+        }
+
+        thead, tfoot {
             background-color: grey;
             color: white;
         }
@@ -33,27 +40,36 @@
         td#total{
             text-align: right;
         }
+
+        /* efeito zebrado só no tbody, sem afetar header e footer */
+
+        tbody > tr:nth-child(2n){
+            background-color: lightgray;
+        }
+        /* posso usar tbm com o parametro par(even) ou impar(odd):
+
+        tbody > tr:nth-child(odd)
+        tbody > tr:nth-child(even)
+        
+        */
+        thead > tr> th{
+            position: sticky;
+            top: 0;
+            background-color:grey ;
+        }
+        /* efeito para fixar/grudar o cabeçalho eqto rola a tabela pra baixo, ideal para tabela com muitas linhas */
     </style>
 </head>
 <body>
     <h1>Uso de Tabelas Grandes</h1>
-    <!--
-        ANATOMIA DAS BIG TABLES
-        TABLE
-            CAPTION = legenda/nome
-            THEAD
-                TR TD TH
-        (obg)TBODY
-                TR TD TH
-            TFOOT
-                TR TD TH
-    -->
-
+  
     <table>
         <caption>População dos Estados do Brasil</caption>
         <thead>
-            <th scope="col">Unidade Federativa</td>
-            <th scope="col" style="width: 90px;">População</td>
+            <tr>
+                <th scope="col">Unidade Federativa</td>
+                <th scope="col" style="width: 90px;">População</td>
+            </tr>
         </thead>
 
         <tbody> 
@@ -168,10 +184,8 @@
         </tbody>
 
         <tfoot>
-            <tr>
                 <th scope="row">Total de Habitantes </th>
                 <td id="total"><strong>203 062 512</strong>	</td>
-            </tr>
         </tfoot>
     </table>
 </body>
